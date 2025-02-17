@@ -1,0 +1,53 @@
+# Parkinson's Disease Detection Using Machine Learning
+
+## Overview
+This project implements a machine learning-based approach to detect Parkinson's disease using various classification models. The repository contains data preprocessing scripts, model training files, and a graphical user interface for predictions.
+
+## Features
+- Data preprocessing for handling input datasets
+- Implementation of machine learning models (Random Forest, SVM)
+- Pre-trained models stored in `.pkl` format for easy loading
+- GUI-based application for user-friendly predictions
+
+## Installation
+### Prerequisites
+Ensure you have Python installed along with the required dependencies. You can install them using:
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+1. Run the preprocessing script to prepare the dataset:
+   ```bash
+   python data_processing.py
+   ```
+2. Train the model (if needed):
+   ```bash
+   python model.py
+   ```
+3. Launch the graphical user interface:
+   ```bash
+   python graphic_era_app.py
+   ```
+4. Use `main.py` to execute the detection pipeline:
+   ```bash
+   python main.py
+   ```
+
+## Files Description
+- `data_processing.py` - Handles data preprocessing and feature extraction
+- `model.py` - Defines and trains machine learning models
+- `parkinson_detection.py` - Implements the detection logic
+- `graphic_era_app.py` - GUI-based application for predictions
+- `main.py` - Entry point for the detection pipeline
+- `rf_model.pkl`, `svm_model.pkl` - Pre-trained models
+
+## Contributing
+Feel free to fork the repository and submit pull requests for improvements.
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+For questions or collaboration, contact [Your Email or GitHub Profile].
+
