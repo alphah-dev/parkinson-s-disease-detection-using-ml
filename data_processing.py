@@ -13,8 +13,8 @@ def load_and_preprocess_data():
         raise ValueError("Dataset contains missing values. Please clean the data.")
 
     # Assuming the last column is the target (adjust if needed)
-    X = data.iloc[:, :-1]  # Features
-    y = data.iloc[:, -1]   # Target labels
+    X = data.iloc[:, :-1]   
+    y = data.iloc[:, -1]   
 
     # Split dataset
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -24,9 +24,9 @@ def load_and_preprocess_data():
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    return X_train, X_test, y_train, y_test, scaler  # Return the scaler too
+    return X_train, X_test, y_train, y_test, scaler  
 
 # Preprocess a single input sample for prediction
 def preprocess_input(features):
-    _, _, _, _, scaler = load_and_preprocess_data()  # Load trained scaler
+    _, _, _, _, scaler = load_and_preprocess_data()  
     return scaler.transform(np.array(features).reshape(1, -1))
